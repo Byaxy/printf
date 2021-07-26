@@ -7,10 +7,7 @@
 
 
 int _putchar(char c);
-<<<<<<< HEAD
-int _printf(const char *format, ...);
-=======
->>>>>>> a19192ae63196c04a3b6a32de4aef14632696b66
+
 char *create_buffer(void);
 void write_buffer(char *buffer, int len, va_list list);
 char *_strcpy(char *dest, char *src);
