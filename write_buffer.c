@@ -7,9 +7,9 @@
  */
 void write_buffer(char *buffer, len)
 {
-char *buff;
-buff = relloc(buffer, len);
-write(1,buff,len);
-free(buff);
-va_end(list);
+	char *buff;
+	buff = relloc(buffer, len);
+	write(1, buff, len);
+	free(buff);
+	va_end(list);
 }
