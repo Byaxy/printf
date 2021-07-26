@@ -1,24 +1,35 @@
 #include "holberton.h"
+
 /**
- * print_c - returns char as string
- * @list: char
- * Return: String verion of char
+ * print_c - prints a char
+ * @c: char to print
+ *
+ * Return: always 1
  */
-char *print_c(va_list list)
+int print_c(va_list c)
 {
-	char *s;
-	char c;
+	char ch = (char)va_arg(c, int);
 
-	c = va_arg(list, int);
+	_putchar(ch);
+	return (1);
+}
 
-	if (c == 0)
-		c = '\0';
+/**
+ * print_s - prints a string
+ * @s: string to print
+ *
+ * Return: number of chars printed
+ */
+int print_s(va_list s)
+{
+	int count;
+	char *str = va_arg(s, char *);
 
-	s = malloc(sizeof(char) * 2);
-	if (s == NULL)
-		return (NULL);
-	s[0] = c;
-	s[1] = '\0';
-
-	return (s);
+	if (str == NULL)
+		str = "(null)";
+	for (count = 0; str[count]; count++)
+	{
+		_putchar(str[count]);
+	}
+	return (count);
 }
