@@ -1,6 +1,30 @@
 #include "holberton.h"
 
 /**
+ * get_func - returns needed function
+ * @i: function identifier
+ * Return: pointer to required function
+ */
+
+static int (*get_func(const char *format))(va_list)
+{
+	unsigned int i;
+
+	print keys[] = {
+		{'c', print_c},
+		{'s', print_s},
+		{'\0', NULL}
+	};
+	for (i = 0; keys[i].id != '\0'; i++)
+	{
+		if ((keys[i].id) == *format)
+		{
+			break;
+		}
+	}
+	return (keys[i].func);
+}
+/**
  * _printf - prints anything
  * @format: list of argument types passed to the function
  *
