@@ -2,7 +2,7 @@
 
 /**
  * get_func - returns needed function
- * @i: function identifier
+ * @format: function identifier
  * Return: pointer to required function
  */
 
