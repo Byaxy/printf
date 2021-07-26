@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+int _putchar(char c);
 int _printf(const char *format, ...);
 char* (*get_func(char i))(va_list);
 char *create_buffer(void);
@@ -14,8 +14,8 @@ int _strlen(char *s);
 
 /* printf functions */
 int _printf(const char *format, ...);
-char *print_s(va_list list);
-char *print_c(va_list list);
+int print_s(va_list s);
+int print_c(va_list c);
 char *print_d(va_list list);
 char *itob(va_list list);
 char *rot13(va_list list);
@@ -32,6 +32,6 @@ typedef struct types
 {
 	char id;
 	char* (*func)(va_list);
-}print;
+} print;
 
 #endif
