@@ -12,6 +12,22 @@ void write_buffer(char *buffer, int len, va_list list);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
+/* printf functions */
+int _printf(const char *format, ...);
+char *print_s(va_list list);
+char *print_c(va_list list);
+char *print_d(va_list list);
+char *itob(va_list list);
+char *rot13(va_list list);
+char *rev_string(va_list list);
+char *itoOctal(va_list list);
+
+/**
+ * struct types - struct
+ * @id: identifier of type to print
+ * @func: pointer to respective function
+ */
+
 typedef struct types
 {
 	char id;
