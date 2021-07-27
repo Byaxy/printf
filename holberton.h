@@ -7,11 +7,9 @@
 
 
 int _putchar(char c);
-
 char *create_buffer(void);
 void write_buffer(char *buffer, int len, va_list list);
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
+
 /* printf functions */
 int _printf(const char *format, ...);
 int print_s(va_list s);
