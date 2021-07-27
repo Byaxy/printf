@@ -23,6 +23,7 @@ static int (*get_func(const char *format))(va_list)
 		{'r', print_r},
 		{'R', print_R},
 		{'p', print_p},
+		{'S', print_S},
 		{'\0', NULL}
 	};
 	for (i = 0; keys[i].id != '\0'; i++)
