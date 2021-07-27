@@ -30,8 +30,8 @@ int print_p(va_list p)
 	unsigned int i, sum;
 	unsigned int a[16];
 	unsigned long n, m;
-	int count;
-	char *str = "(nill)";
+	int count = 0;
+	char *str = "(nil)";
 
 	n = va_arg(p, unsigned long);
 	if (n == 0)
