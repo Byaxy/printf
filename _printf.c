@@ -19,7 +19,7 @@ static int (*get_func(const char *format))(va_list)
 		{'o', print_o},
 		{'b', print_b},
 		{'x', print_x},
-		{'X',print_X},
+		{'X', print_X},
 		{'r', print_r},
 		{'R', print_R},
 		{'p', print_p},
