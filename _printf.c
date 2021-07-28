@@ -5,7 +5,7 @@
  * @format: function identifier
  * Return: pointer to required function
  */
-
+int G = 0;
 static int (*get_func(const char *format))(va_list)
 {
 	unsigned int i;
@@ -36,16 +36,19 @@ if ((keys[i].id) == *format)
 if ((keys[i].id) == '+')
 {
 _putchar('+');
+G +=1;
 return (keys[2].func);
 }
 else if ((keys[i].id) == '#')
 {
 _putchar('#');
+G +=1;
 return (keys[2].func);
 }
 else if ((keys[i].id) == ' ')
 {
 _putchar(' ');
+G +=1;
 return (keys[2].func);
 }
 break;
@@ -82,6 +85,7 @@ int _printf(const char *format, ...)
 		{
 			count += f(valist);
 			i += 2;
+			if (G > 0)
 			break;
 		}
 		if (!format[i + 1])
