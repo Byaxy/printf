@@ -1,6 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -25,6 +26,10 @@ int print_X(va_list X);
 int print_p(va_list p);
 int print_r(va_list r);
 int print_S(va_list S);
+int print_pl(va_list v);
+int print_sp(va_list v);
+int print_ha(va_list v);
+
 /**
  * struct types - struct
  * @id: identifier of type to print

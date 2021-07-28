@@ -24,16 +24,34 @@ static int (*get_func(const char *format))(va_list)
 		{'R', print_R},
 		{'p', print_p},
 		{'S', print_S},
+		{'+', print_pl},
+		{'#', print_ha},
+		{' ', print_sp},
 		{'\0', NULL}
 	};
-	for (i = 0; keys[i].id != '\0'; i++)
-	{
-		if ((keys[i].id) == *format)
-		{
-			break;
-		}
-	}
-	return (keys[i].func);
+for (i = 0; keys[i].id != '\0'; i++)
+{
+if ((keys[i].id) == *format)
+{
+if ((keys[i].id) == '+')
+{
+_putchar('+');
+return (keys[2].func);
+}
+else if ((keys[i].id) == '#')
+{
+_putchar('#');
+return (keys[2].func);
+}
+else if ((keys[i].id) == ' ')
+{
+_putchar(' ');
+return (keys[2].func);
+}
+break;
+}
+}
+return (keys[i].func);
 }
 /**
  * _printf - prints anything
@@ -64,7 +82,7 @@ int _printf(const char *format, ...)
 		{
 			count += f(valist);
 			i += 2;
-			continue;
+			break;
 		}
 		if (!format[i + 1])
 			return (-1);
